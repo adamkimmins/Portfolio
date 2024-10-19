@@ -47,7 +47,7 @@
         <div class="steps">
                 <h1>Steps</h1>
                 <div class="project">
-                    <div class ="project-title">Creating the universe</div>
+                    <div class ="project-title">Creating the Universe</div>
                     <div class= "overview">
                         To start with this render
                         I set the scene, camera and renderer, and I decided to create the stars first:
@@ -61,13 +61,13 @@
                         }
                             </p>
                         </div>
-                        Here I created a variable called stars and then use a loop to 700 stars randomly spread between the 8,000,000,000 pixels that make up the area of the X, Y and Z planes.
+                        Here, I use a loop to create 700 stars randomly spread between the 8b pixels that make up the area of the X, Y and Z planes.
                     </div>
                 </div>
                 <div class="project">
                     <div class ="project-title">Creating the Sun and Earth</div>
                     <div class= "overview">
-                        Next I created the planet body and the sun.
+                        Next, I created the planet body and the sun.
                         I create two spheres and assign the sun to the pointlight:
                         <div class="source-code">
                             <p>
@@ -89,15 +89,15 @@
                                 scene.add(sunMesh);<br>
                             </p>
                         </div>
-                        I created two variables called sunLight and sunMesh and set their values while loading in the texture for the sunMesh.
+                        I created two variables called sunLight and sunMesh and set their positions while loading in the texture for the sunMesh.
                         
                     </div>
                 </div>
             
                 <div class="project">
-                    <div class ="project-title">Putting the world in motion</div>
+                    <div class ="project-title">Putting the World in Motion</div>
                     <div class= "overview">
-                        The last part of my render was the animation function:
+                        The last main part of my render was the animation function:
                         <div class="source-code">
                             <p>
                                 let time = 0;<br>
@@ -122,9 +122,9 @@
                                 animate();
                             </p>
                         </div>
-                        I set up a catch for if the Earth's being interacted with, and then used a time variable to control where the Earth is in it's orbit.<br>
-                        x===sin(time), z===cos(time) both control the position and orbit, 2&pi; together they create the planets trajectory.
-                        
+                        I set up an if statement for when the Earth's being interacted with, and then used a time variable to control where the Earth is in it's orbit.<br>
+                        A circle's parametric form is x=r⋅cos(θ) and y=r⋅sin(θ), r is the radius and θ is the angle.<br>
+                        Time acts as θ, and the radius r is 1000 units. Math.sin(time) * 1000 sets the x-coordinate, and Math.cos(time) * 1000 sets the z-coordinate. I use z instead of y because the display is three dimensional and z is on the horizontal plane.
                     </div>
                 </div>
           
