@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/render.css">
+    <title>render</title>
+    
+</head>
+<body>
+    
+<div class="container">
+        
+        <div class="texture-selector">
+            <div class="texture-option" data-texture="/images/bluemarble.jpg" style="background-image: url('/images/bluemarble.jpg');"></div>
+            <div class="texture-option" data-texture="/images/pluto.jpg" style="background-image: url('/images/pluto.jpg');"></div>
+            <div class="texture-option" data-texture="/images/unknown.jpg" style="background-image: url('/images/unknown.jpg');"></div>
+        </div>
+
+    
+        <div class="earth">
+    <header class="header">
+        <h1>Earth</h1>
+        <p>XII VI MMXXIV, NASA Terra "Blue-Marble"</p>
+    </header>
+</div>
+
+<div class="pluto">
+    <header class="header">
+        <h1>Pluto</h1>
+        <p>XXIV XII MMXV, NASA New-Horizons "Sputnik Planitia"</p>
+    </header>
+</div>
+
+<div class="unknown">
+    <header class="header">
+        <h1>Ceres</h1>
+        <p>Unknown</p>
+    </header>
+</div>
+        <section class="hero">
+            <div class="render-text">
+                <p>Click and drag to move the planet
+                     <br>Or scroll down for projects</p>
+            </div>
+        </section>
+    
+
+        
+        <div class="content">
+                <div class="back">
+                        <a href = "/index.html">Back</a>
+                </div>
+        
+                <h2>Planet Render</h2>
+                    <p>Here's my planet render / design I've created using three.js</p>
+        </div>
+
+
+        <div class="steps">
+                <h1>Steps</h1>
+                <div class="project">
+                    <div class ="project-title">Creating the universe</div>
+                    <div class= "overview">
+                        To start with this render
+                        I set the scene, camera and renderer, and I decided to create the stars first:
+                        <div class="source-code">
+                            <p>
+                            for (let i = 0; i < 700; i++) {<br>
+                            const x = THREE.MathUtils.randFloatSpread(2000);<br>
+                            const y = THREE.MathUtils.randFloatSpread(2000);<br>
+                            const z = THREE.MathUtils.randFloatSpread(2000);<br>
+                            starVertices.push(x, y, z);<br>
+                        }
+                            </p>
+                        </div>
+                        Here I created a variable called stars and then use a loop to 700 stars randomly spread between the 8,000,000,000 pixels that make up the area of the X, Y and Z planes.
+                        
+                    </div>
+                </div>
+           
+                <div class="project">
+                    <div class ="project-title">Creating the Sun and Earth</div>
+                    <div class= "overview">
+                        Next I created the planet body and the sun.
+                        I create two spheres and assign the sun to the pointlight:
+                        <div class="source-code">
+                            <p>
+                                const sunLight = new THREE.PointLight(0xffffff, 3.5, 1200);<br>
+                                sunLight.position.set(0, 7, 0);<br>
+                                scene.add(sunLight);<br>
+                                
+                                const sunTextureLoader = new THREE.TextureLoader();<br>
+                                const sunGeometry = new THREE.SphereGeometry(20, 32, 32);<br>
+                                const sunMaterial = new THREE.MeshBasicMaterial();<br>
+                                
+                                sunTextureLoader.load('sun.jpg', function(texture) {<br>
+                                    sunMaterial.map = texture;<br>
+                                    sunMaterial.needsUpdate = true;<br>
+                                });<br>
+                                
+                                const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);<br>
+                                sunMesh.position.copy(sunLight.position);<br>
+                                scene.add(sunMesh);<br>
+                            </p>
+                        </div>
+                        I created two variables called sunLight and sunMesh and set their values while loading in the texture for the sunMesh.
+                        
+                    </div>
+                </div>
+            
+                <div class="project">
+                    <div class ="project-title">Putting the world in motion</div>
+                    <div class= "overview">
+                        The last part of my render was the animation function:
+                        <div class="source-code">
+                            <p>
+                                let time = 0;<br>
+                                const animate = function () {<br>
+                                    time += 0.002;<br>
+                                    sunLight.rotation.y += 0.001;<br>
+                                    sunMesh.position.copy(sunLight.position);<br>
+                                    if (isDragging){<br>
+                                        sphere.rotation.y += 0;<br>
+                                        time -= 0.002;
+                                    }<br>
+                                    else{sphere.rotation.y += 0.01;<br>
+                                        sphere.rotation.x === Math.sin(time) * 1000;<br>
+                                        sphere.position.x = Math.sin(time) * 1000;<br>
+                                        sphere.position.z = Math.cos(time) * 1000;}<br>
+                                    
+                                    camera.position.set(sphere.position.x, sphere.position.y, sphere.position.z + 10);<br>
+                                    <br>
+                                    renderer.render(scene, camera);<br>
+                                    requestAnimationFrame(animate);
+                                };<br>
+                                animate();
+                            </p>
+                        </div>
+                        I set up a catch for if the Earth's being interacted with, and then used a time variable to control where the Earth is in it's orbit.<br>
+                        x===sin(time), z===cos(time) both control the position and orbit, 2&pi; together they create the planets trajectory.
+                        
+                    </div>
+                </div>
+          
+        </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+    <script src = "/js/render.js"> </script>
+</body>
+</html>

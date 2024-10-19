@@ -1,0 +1,193 @@
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.texture-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 20; /* Ensure it's on top of the 3D scene */
+}
+
+.texture-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.texture-option.selected {
+    border-color: white; /* Highlight selected texture */
+}
+
+
+/* Container for the entire layout */
+.container {
+    position: relative;
+}
+
+/* Full-screen Three.js canvas  */
+#threejs-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+}
+
+/* Header styling */
+
+.earth .header,
+.pluto .header,
+.unknown .header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 1;
+    transition: transform 0.2s ease-out; 
+    will-change: transform; 
+    user-select: none;       
+    pointer-events: none;
+}
+
+/* Initial state - hide all headers */
+.earth .header,
+.pluto .header,
+.unknown .header {
+    display: none;
+}
+
+
+/* Hero section for overlay text */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1; 
+    user-select: none;       
+    /* pointer-events: none; */
+}
+
+
+
+.text-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.render-text {
+    text-wrap: nowrap;
+    text-shadow:2px 2px 2px rgba(0,0,0,1);
+    margin: 3.5rem 0 0;
+    padding: 35vh 30vw;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    transition: opacity .1s ease;
+}
+.render-text:hover{ 
+    opacity: 0;
+}
+
+/* whitespace content */
+
+
+.back {
+    overflow: hidden;
+    position:relative;
+    margin:3px 0 0;
+    padding:5px 0;
+    font-size: 15px;
+    }
+.back a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    padding: 4px;
+    border-radius: 20%;
+    
+    border-bottom: 3px solid #86acb6;
+   }
+
+.back a:hover {
+        color: #ffffff;
+        background:linear-gradient(#bff1ff,#f5f5f5);
+        border-top: 1px solid #d3d3d3;
+        border-bottom: 3px solid #bff1ff;
+        }
+
+.back a:active {
+    color: #ffffff;
+    background: linear-gradient(#f5f5f5,#1a23412e);
+    border-top: 1px solid #d3d3d300;
+    border-bottom: 3px solid #d5d5d52c;
+    }
+
+
+.content {
+    padding: 50px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.content h2 {
+    font-size: 2rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.steps {
+    padding: 6%;
+    background-color: #d5ecff86;
+   backdrop-filter: blur(20px);
+}
+.steps h1 {
+    color: white;
+}
+
+.project-title {
+    font-size: 3rem;
+    background-color: #ffffff16;
+    color: white;
+
+    text-align: center;
+    margin: 0rem;
+    padding: 1rem;
+}
+
+.overview {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 10%;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 1rem rgb(0, 0, 0);
+    color: rgb(237, 237, 237);
+}
+
+.source-code {
+    justify-self: center;
+    text-align: left;
+    color: #bff1ff;
+    background-color: #00021b16;
+    text-shadow: 0 0 0;
+    margin: 6rem 0.5rem 3rem;
+    
+}

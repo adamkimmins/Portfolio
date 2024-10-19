@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "dtxA876D2f3Fc0dQB",
+            });
+        })();
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+                <div class="nav">
+                    <a href="/pdf/resume.pdf" target="_blank"><div class="resume">Resume</div></a>
+                    <a href="#grid"><li>Work</li></a>
+                    <a href="#contact"><div class="contactme">Contact Me</div></a>
+                </div>
+        </nav>
+        <div class="dropbox">
+       <div class="drop" id="drop1"></div>
+       <h1 id="adins">Ad<div class="bubblebox"><div class="warpedtext">
+       am Kimm</div></div>ins</h1>
+       </div>
+    </header>
+<div class="introwrapper">
+    <div class="intro" id="intro">
+            <h2>About Me</h2>
+            <img src="/images/me.jpg" id="me">
+        <div class="intro1">
+            I'm currently a <span class="accent">Full-Time Student at Ohio University.</span> 
+            My major is <span class="accent">Computer Science Technology</span>-
+            most of the learning and work I do is for front-end and
+            software development.
+        </div>
+        <p>
+        My strongest languages are <span class="accent">C++</span> and <span class="accent">CSS/HTML</span>, with Javascript and SQL close behind. 
+         Newer languages I've begun learning are Python, Java and Swift. 
+         I'm also familiar with Dev Tools such as Github, Git, MS Teams and Docker. 
+       </p></div>
+</div>
+<div class="grid" id = "grid">
+        
+            <h3>Recent Projects</h3>
+<div class="work" >
+                
+                 <a href="/html/uxui.html">
+                    <div class="project" >
+                        <div class ="project-title">UX/UI</div>
+                        <div class= "overview" style="display: flex; align-items: center;">
+                            Overview of my software designs:
+                            <img src="/images/bubble.png" style="width: min(80%, 80px); margin: 10px;">
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/soft.html">
+                    <div class="project">
+                        <div class ="project-title">Software</div>
+                        <div class= "overview" style="display: flex; align-items: center;">
+                            Virtual demo of Tic-Tac-Toe using C++:
+                            <img src="/images/tictactoe.png" style="width: min(80%, 80px); margin: 10px;">
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/render.html">
+                    <div class="project">
+                        <div class ="project-title">3D</div>
+                        <div class= "overview" style="display: flex; align-items: center;">
+                            Showcase of my planet render: <img src="/images/earthss.png" style="width: min(80%, 80px); margin: 10px;">
+                        </div>
+                    </div>
+                </a>
+            </div>
+</div>
+    </div>
+
+
+<div class="contact" id="contact">
+            <h3>Contact Me</h3>
+            <p>GitHub: <br><a href="https://github.com/adamkimmins">adamkimmins</a></p>
+            <p>Email: <br><a href="#" id="emailLink">adam.kimmins23@gmail.com</a></p>
+            <p>Resume: <br><a href="/pdf/resume.pdf" target="_blank">adam_kimmins</a></p>
+</div>
+<div id="emailForm" class="form-popup">
+        <span class="close-btn">&times;</span>
+    <div class="form-content">
+      <form>
+        <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+        <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email"><br><br>
+        <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter message here"></textarea><br><br>
+        <input type="submit" id="submit" value="Submit">
+      </form>
+    </div>
+</div>
+    <footer>
+        <p>© 2024 Adam Kimmins</p>
+    </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="/js/main.js"></script>
+    
+</body>
+</html>
