@@ -1,4 +1,4 @@
-// render content pair of lacks
+// Render content
 const header = document.querySelector('.header');
 const subheader = document.querySelector('.hero');
 window.addEventListener('scroll', () => {
@@ -17,7 +17,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.domElement.id = 'threejs-background';
 document.body.appendChild(renderer.domElement);
 
-// Handle window resizing
+// Resizing
 window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -48,7 +48,7 @@ scene.add(starField);
 
 
 
-const sunLight = new THREE.PointLight(0xffffff, 3.5, 1200); // Increased intensity for more dramatic effect
+const sunLight = new THREE.PointLight(0xffffff, 3.5, 1200); // INC *600
 sunLight.position.set(0, 7, 0);
 scene.add(sunLight);
 
@@ -118,7 +118,7 @@ const textureOptions = document.querySelectorAll('.texture-option');
 
 
 
-// heaters
+// Headers
 const earthHeader = document.querySelector('.earth .header');
 const plutoHeader = document.querySelector('.pluto .header');
 const unknownHeader = document.querySelector('.unknown .header');

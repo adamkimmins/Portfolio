@@ -24,7 +24,7 @@ projects.forEach(project => {
 //scroll trigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate h2 from the left
+// h2 from left
 gsap.fromTo("h2", 
     { x: "-300%", opacity: 0 }, 
     { x: "0%", 

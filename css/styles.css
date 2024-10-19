@@ -1,6 +1,5 @@
 /* General */
 * { 
-    /* border: solid 2px;  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -142,7 +141,6 @@ h1 {
 .bubblebox {
     display: inline-block;
     padding: 180px 2px;
-    /* margin: 0 0 15.5px 0; */
     border-radius: 57% 43% 57% 73%/ 59% 52% 78% 75%;
     clip-path: ellipse(59% 43% at 39.9% 50%);
     overflow: hidden;}
@@ -213,7 +211,6 @@ h2 {
     padding: 0;
     margin-top: 10vh;
     transform: translateX(-300%); 
-    /* color: #bff1ff; */
 }
 
 #me {

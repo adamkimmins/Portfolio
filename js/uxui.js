@@ -1,4 +1,3 @@
-
 //headers section
 function toggleSection(toggleHeaderId, hiddenSectionId) {
     var hiddenSection = document.getElementById(hiddenSectionId);
@@ -14,8 +13,6 @@ document.getElementById('toggleHeader').addEventListener('click', function() {
 document.getElementById('toggleHeaderTwo').addEventListener('click', function() {
     toggleSection('toggleHeaderTwo', 'projSecTwo');
 });
-
-
 
 //scroll trigger
 
@@ -43,7 +40,6 @@ gsap.to("h5", {
         scrub: true,
     }
 });
-
 
 gsap.from(".threedwrapper h2", {
     x: 200,
@@ -105,9 +101,6 @@ gsap.from(".hiddenwrapper h3", {
     document.querySelector('#toggleOn').addEventListener('click', toggleLights);
     document.querySelector('#toggleOff').addEventListener('click', toggleLights);
     
-
-
-
 //css light switch
 document.querySelectorAll('.light-toggle').forEach(toggle => {
     toggle.addEventListener('click', () => {
