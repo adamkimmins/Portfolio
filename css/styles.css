@@ -537,9 +537,12 @@ footer {
     height: 100%;
     left: 0;
     top: 0;
-}
-
     }
+    .phME {
+        display: none;
+    }
+
+}
 @media screen and (max-width:400px){
     nav .nav li, nav,.resume, .contactme{
     background-color: #fff;
@@ -547,5 +550,9 @@ footer {
     margin: 0;
     text-wrap: nowrap;
     }
-    
+    nav .nav li, .resume, .contactme{
+        padding: 20px 30px;}
+    nav .nav li:hover, .resume:hover, .contactme:hover{
+        border:none;
     }
+}
