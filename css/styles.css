@@ -550,9 +550,18 @@ footer {
     margin: 0;
     text-wrap: nowrap;
     }
+    .nav {
+    display: flexbox;
+    width: 100%;
+    padding:0;
+    overflow: hidden;
+    justify-content: space-around;
+}
     nav .nav li, .resume, .contactme{
-        padding: 20px 30px;}
+        padding: 20px 0;
+        width: 29vw;}
     nav .nav li:hover, .resume:hover, .contactme:hover{
         border:none;
     }
-}
+    
+    }
