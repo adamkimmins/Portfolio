@@ -560,6 +560,7 @@ footer {
     justify-content: space-around;
 }
     nav .nav li, .resume, .contactme{
+        font-size: 1.2rem;
         padding: 20px 0;
         width: 32vw;}
     nav .nav li:hover, .resume:hover, .contactme:hover{
