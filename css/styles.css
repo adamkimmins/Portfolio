@@ -553,13 +553,13 @@ footer {
     .nav {
     display: flexbox;
     width: 100%;
-    padding:0;
+    padding: 0 0 10px;
     overflow: hidden;
     justify-content: space-around;
 }
     nav .nav li, .resume, .contactme{
         padding: 20px 0;
-        width: 29vw;}
+        width: 32vw;}
     nav .nav li:hover, .resume:hover, .contactme:hover{
         border:none;
     }
