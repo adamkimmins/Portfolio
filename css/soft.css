@@ -3,7 +3,7 @@ body {
     margin:0;
     background-color: #a5a5a5;
     height: 100vh;
-    overflow: hidden;
+    
 }
 
 .container {
@@ -69,6 +69,14 @@ p {
     color: #ffffff
 }
 
+a, a p {
+    text-decoration:none;
+    color:#bff1ff;
+}
+a p:hover {
+    color: white;
+}
+
 .text {
     background: linear-gradient(#000000, #a5a5a5);
     padding: 20px 0 300px 0;
@@ -79,7 +87,6 @@ p {
         padding: 10vh 3vh;
     }
     body {
-        overflow: visible;
         height: auto;
     }
 }
