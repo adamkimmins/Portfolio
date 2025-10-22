@@ -14,6 +14,10 @@ document.getElementById('toggleHeaderTwo').addEventListener('click', function() 
     toggleSection('toggleHeaderTwo', 'projSecTwo');
 });
 
+document.getElementById('code').addEventListener('click', function() {
+    toggleSection('code', 'extendedCode');
+});
+
 //scroll trigger
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,35 +79,4 @@ gsap.from(".hiddenwrapper h3", {
         end: "top 20%",
         scrub: true,
     }
-});
-
-//lights
-    function toggleLights() {
-        var lightOn = document.querySelector('.lighton');
-        var lightOff = document.querySelector('.lightoff');
-        var toggleOn = document.querySelector('#toggleOn');
-        var toggleOff = document.querySelector('#toggleOff');
-        lightOn.classList.toggle('hidden');
-        lightOff.classList.toggle('visible');
-    
-        if (!lightOn.classList.contains('hidden')) {
-            lightOn.style.opacity = 1;
-            lightOff.style.opacity = 0;
-            toggleOff.style.opacity = 1;
-            toggleOn.style.opacity = 0;
-        } else {
-            lightOn.style.opacity = 0;
-            lightOff.style.opacity = .6;
-            toggleOn.style.opacity = 1;
-            toggleOff.style.opacity = 0;
-        }
-    }
-    document.querySelector('#toggleOn').addEventListener('click', toggleLights);
-    document.querySelector('#toggleOff').addEventListener('click', toggleLights);
-    
-//css light switch
-document.querySelectorAll('.light-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-});
+});  
