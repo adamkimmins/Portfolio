@@ -42,10 +42,15 @@ body {
     border-left: 3px solid #1a23440b;
     border-right: 3px solid #ffffff00;}
 
-.title{
+    h1 {
     text-align: center;
-    background: linear-gradient(#a5a5a5, #000000);
     color: #ffffff;
+}
+
+.title{
+    
+    background: linear-gradient(#a5a5a5, #000000);
+   
 }
 
 .video-wrapper {
@@ -83,19 +88,23 @@ a p:hover {
 }
 
 @media screen and (max-width: 768px){
+    #video {
+        padding: 5vh 0 0 0;
+    }
     h1 {
-        padding: 10vh 3vh;
+        padding: 2vh 3vh 0;
     }
     body {
         height: auto;
     }
     .text {
-    padding: 20px 0 6vh 0;
+    padding: 20px 0 2vh 0;
 }
 }
 
 /* JS version */
 /* --- Ttt Styling --- */
+
 .game-section {
   text-align: center;
   padding: 0 0 50px;
